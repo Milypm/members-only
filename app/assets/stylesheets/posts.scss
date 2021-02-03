@@ -1,3 +1,35 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+    margin: 0 auto;
+}
+
+h5 {
+    font-size: 35px;
+}
+
+.card-text {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 15px;
+    color: #fff;
+}
+
+.container {
+    border: 2px black solid;
+}
+
+.col {
+    border: 2px red solid;
+    margin: 5px;
+    padding: 10px;
+}
+
+.btn-new-post {
+    margin-left: 1220px;
+    border: 1px rgb(136, 136, 102) solid;
+    font-size: 15px;
+}

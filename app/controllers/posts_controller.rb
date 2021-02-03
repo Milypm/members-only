@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :user_signed, only: %i[ new create ]
+  before_action :user_signed_in?, only: %i[ new create ]
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_post, only: %i[ show edit update destroy ]
 
@@ -62,10 +62,6 @@ class PostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
-    end
-
-    def user_signed
-      user_signed_in?
     end
 
     # Only allow a list of trusted parameters through.

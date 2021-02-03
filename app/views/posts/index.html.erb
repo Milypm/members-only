@@ -1,9 +1,31 @@
 <p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+  <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-success btn-new-post" %>
+<% end %>
+<div class="container">
+  <div class="row">
+<% @posts.each do |post| %>
+  <!--<div class="card" style="width: 50rem;">
+    <div class="card-body">-->
+    <div class="col">
+      <h5 class="card-title"><%= post.title %></h5><br/>
+      <p class="card-text"><%= post.description %></p><br/>
+      <p><%= post.user_id %></p><br/>
+      <%= link_to 'View', post, class:"btn btn-success btn-sm" %>
+    </div>
+    <!--</div>
+  </div>-->
+<% end %>
+</div>
+</div>
+</div>
+<br>
 
-<h1>Posts</h1>
+<!--#<%= link_to 'New Post', new_post_path %>-->
 
-<table>
-  <thead>
+
+
+<!--<thead>
     <tr>
       <th>Title</th><br/>
       <th>Description</th><br/>
@@ -13,19 +35,14 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
+    #<% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><%= post.user_id %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        #<td><%= post.title %></td>
+        #<td><%= post.description %></td>
+        #<td><%= post.user_id %></td>
+        #<td><%= link_to 'Show', post %></td>
+        #<td><%= link_to 'Edit', edit_post_path(post) %></td>
+        #<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    #<% end %>
+  </tbody>-->
