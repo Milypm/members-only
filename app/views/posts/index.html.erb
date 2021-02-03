@@ -10,8 +10,13 @@
     <div class="col">
       <h5 class="card-title"><%= post.title %></h5><br/>
       <p class="card-text"><%= post.description %></p><br/>
+      <% if user_signed_in? %>
+        <p>By <%= name %></p><br/>
+      <% end %>
       <p><%= post.user_id %></p><br/>
       <%= link_to 'View', post, class:"btn btn-success btn-sm" %>
+      <%= link_to 'Edit', post, class:"btn btn-success btn-sm" %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
     </div>
     <!--</div>
   </div>-->

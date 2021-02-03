@@ -10,6 +10,13 @@
   <%= @post.description %>
 </p>
 
+<% if user_signed_in? %>
+  <p>
+    <strong>User:</strong>
+    <p>By <%= @post.user.name %></p><br/>
+  </p>
+<% end %>
+
 <p>
   <strong>User:</strong>
   <%= @post.user_id %>
