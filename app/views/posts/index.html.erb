@@ -1,48 +1,21 @@
-<div class="container mt-2 py-3 border flex-column d-flex align-items-center">
+<div class="container py-3 flex-column d-flex align-items-center">
   <% if user_signed_in? %>
-    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-primary" %>
+    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-success" %>
   <% end %>
   <br/><br/>
-    <% @posts.each do |post| %>
-      <!--<div class="card" style="width: 50rem;">
-        <div class="card-body">-->
-          <h5 class="card-title mt-4"><%= post.title %></h5><br/>
-          <p class="card-text flex-md-fill"><%= post.description %></p><br/>
-          <% if user_signed_in? %>
-            <p>By <%= post.user.name %></p><br/>
-          <% end %>
-          <div class="cont d-flex border mb-5">  
-            <%= link_to 'Edit', post, class:"btn btn-success btn-sm" %>
-            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
-          </div>
-    <% end %>
-
+  <% @posts.each do |post| %>
+    <div class="card border my-4" style="width: 50rem;">
+      <div class="card-body flex-column justify-content-center">
+        <h5 class="card-title mt-2 fs-3"><%= post.title %></h5><br/>
+        
+        <% if user_signed_in? %>
+          <p class="fs-5">By <%= post.user.name %></p><br/>
+        <% end %>
+        <div class="cont d-flex mb-2">  
+          <%= link_to 'View', post, class:"btn btn-success btn-sm" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-
 <br>
-
-<!--#<%= link_to 'New Post', new_post_path %>-->
-
-
-
-<!--<thead>
-    <tr>
-      <th>Title</th><br/>
-      <th>Description</th><br/>
-      <th>User</th><br/>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    #<% @posts.each do |post| %>
-      <tr>
-        #<td><%= post.title %></td>
-        #<td><%= post.description %></td>
-        #<td><%= post.user_id %></td>
-        #<td><%= link_to 'Show', post %></td>
-        #<td><%= link_to 'Edit', edit_post_path(post) %></td>
-        #<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    #<% end %>
-  </tbody>-->
