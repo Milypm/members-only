@@ -11,7 +11,7 @@
 - Works on the browser.
 
 ## Built With
-- Ruby (v. 3.0.0)
+- Ruby (v. 2.6.5)
 - Ruby on Rails (v. 6.1.1)
 - devise gem
 - Rubocop
