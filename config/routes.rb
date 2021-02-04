@@ -1,5 +1,6 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  #get 'home/index'
   root 'home#about'
   resources :posts
   devise_for :users

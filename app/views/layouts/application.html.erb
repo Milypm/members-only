@@ -14,6 +14,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
     <%= render 'layouts/header' %>
     <div class="main-container">
@@ -21,7 +22,6 @@
       <% if notice %>
         <%= render 'layouts/alerts' %>
       <% end %>
-
       <%= yield %>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
