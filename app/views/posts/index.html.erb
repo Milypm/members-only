@@ -1,10 +1,10 @@
 <div class="container py-3 flex-column d-flex align-items-center">
-  <p>Hi, <%  %></p>
   <% if user_signed_in? %>
-    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-success" %>
+    <p class="fs-3">Hi, <%= current_user.name %>!</p>
+    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-outline-success mb-3" %>
   <% else %>
     <p class="fs-4">Want to Add a New Post?
-      <%= link_to 'Sign In', new_user_session_path, class:"btn btn-success" %>
+      <%= link_to 'Sign In', new_user_session_path, class:"btn btn-outline-success" %>
     </p>
   <% end %>
   <br/><br/>
