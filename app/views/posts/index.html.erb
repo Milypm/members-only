@@ -1,29 +1,24 @@
-<p id="notice"><%= notice %></p>
-<% if user_signed_in? %>
-  <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-success btn-new-post" %>
-<% end %>
-<div class="container">
-  <div class="row">
-<% @posts.each do |post| %>
-  <!--<div class="card" style="width: 50rem;">
-    <div class="card-body">-->
-    <div class="col">
-      <h5 class="card-title"><%= post.title %></h5><br/>
-      <p class="card-text"><%= post.description %></p><br/>
-      <% if user_signed_in? %>
-        <p>By <%= name %></p><br/>
-      <% end %>
-      <p><%= post.user_id %></p><br/>
-      <%= link_to 'View', post, class:"btn btn-success btn-sm" %>
-      <%= link_to 'Edit', post, class:"btn btn-success btn-sm" %>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
-    </div>
-    <!--</div>
-  </div>-->
-<% end %>
+<div class="container mt-2 py-3 border flex-column d-flex align-items-center">
+  <% if user_signed_in? %>
+    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-primary" %>
+  <% end %>
+  <br/><br/>
+    <% @posts.each do |post| %>
+      <!--<div class="card" style="width: 50rem;">
+        <div class="card-body">-->
+          <h5 class="card-title mt-4"><%= post.title %></h5><br/>
+          <p class="card-text flex-md-fill"><%= post.description %></p><br/>
+          <% if user_signed_in? %>
+            <p>By <%= post.user.name %></p><br/>
+          <% end %>
+          <div class="cont d-flex border mb-5">  
+            <%= link_to 'Edit', post, class:"btn btn-success btn-sm" %>
+            <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
+          </div>
+    <% end %>
+
 </div>
-</div>
-</div>
+
 <br>
 
 <!--#<%= link_to 'New Post', new_post_path %>-->
