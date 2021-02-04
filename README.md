@@ -14,6 +14,7 @@
 - Ruby (v. 2.6.5)
 - Ruby on Rails (v. 6.1.1)
 - devise gem
+- Bootstrap
 - Rubocop
 - Git
  
