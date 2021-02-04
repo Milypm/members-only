@@ -1,22 +1,18 @@
-<div class="card mx-auto flex-column d-flex align-items-center" style="width: 25rem;">
-  <div class="card-header" style="background-color: #fff">
+<div class="card mx-auto mb-3" style="width: 25rem;">
+  <div class="card-body pb-5 mt-2">
     <h2>Log in</h2>
-  </div>
-  <div class="card-body">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+        <% f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", style:"width: 20rem;", placeholder:"Name" %>
       </div>
-      <br/>
       <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <% f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", style:"width: 20rem;", placeholder:"Email" %>
       </div>
-      <br/>
       <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
+        <% f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", style:"width: 20rem;", placeholder:"Password" %>
       </div>
       <br/>
       <% if devise_mapping.rememberable? %>
