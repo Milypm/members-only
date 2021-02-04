@@ -1,6 +1,11 @@
 <div class="container py-3 flex-column d-flex align-items-center">
+  <p>Hi, <%  %></p>
   <% if user_signed_in? %>
     <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-success" %>
+  <% else %>
+    <p class="fs-4">Want to Add a New Post?
+      <%= link_to 'Sign In', new_user_session_path, class:"btn btn-success" %>
+    </p>
   <% end %>
   <br/><br/>
   <% @posts.each do |post| %>
@@ -9,10 +14,10 @@
         <h5 class="card-title mt-2 fs-3"><%= post.title %></h5><br/>
         
         <% if user_signed_in? %>
-          <p class="fs-5">By <%= post.user.name %></p><br/>
+          <p class="fs-5">Created by <%= post.user.name %></p><br/>
         <% end %>
         <div class="cont d-flex mb-2">  
-          <%= link_to 'View', post, class:"btn btn-success btn-sm" %>
+          <%= link_to 'View Post', post, class:"btn btn-success btn-sm" %>
         </div>
       </div>
     </div>
