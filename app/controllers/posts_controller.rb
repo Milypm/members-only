@@ -58,9 +58,8 @@ class PostsController < ApplicationController
   end
 
   def correct_user
-    unless @post.user == current_user
-      redirect_to @post,
-                  notice: "Woops! It seems you're not authorized to edit this post :("
+    redirect_to @post, notice: "Woops! It seems you're not authorized to
+    edit this post :(" unless @post.user == current_user
   end
 
   private
