@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PostsController < ApplicationController
   before_action :user_signed_in?, only: %i[new create]
   before_action :authenticate_user!, except: %i[index show]
@@ -60,10 +58,9 @@ class PostsController < ApplicationController
   end
 
   def correct_user
-    if @post.user != current_user
+    unless @post.user == current_user
       redirect_to @post,
                   notice: "Woops! It seems you're not authorized to edit this post :("
-    end
   end
 
   private
