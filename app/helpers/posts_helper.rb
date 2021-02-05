@@ -24,10 +24,12 @@ module PostsHelper
   end
 
   def post_show_editbtn
-    link_to 'Edit', edit_post_path(@post), class: 'btn btn-success btn-sm' if user_signed_in? && @post.user == current_user
+    link_to 'Edit', edit_post_path(@post), 
+    class: 'btn btn-success btn-sm' if user_signed_in? && @post.user == current_user
   end
 
   def post_show_delbtn
-    link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' if user_signed_in? && @post.user == current_user
+    link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, 
+    class: 'btn btn-danger btn-sm' if user_signed_in? && @post.user == current_user
   end
 end
