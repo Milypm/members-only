@@ -1,0 +1,8 @@
+<div class="card mx-auto mb-3" style="width: 50rem;">
+  <div class="card-body pb-5 mt-2">
+    <h1>Edit Post</h1>
+    <%= render 'form', post: @post %>
+    <%= link_to 'Show', @post, class:"btn btn-secondary btn-sm" %>
+    <%= link_to 'Back', posts_path, class:"btn btn-secondary btn-sm" %>
+  </div>
+</div>

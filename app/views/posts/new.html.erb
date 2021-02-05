@@ -1,0 +1,9 @@
+<div class="container my-3 flex-column d-flex align-items-center" style="width: 50rem;">
+  <div class="card" style="width: 50rem;">
+    <div class="card-body ">
+        <h1>Create New Post</h1>
+        <%= render 'form', post: @post %>
+        <%= link_to 'Back', posts_path, class:"btn btn-secondary btn-sm" %>
+    </div>
+  </div>
+</div>

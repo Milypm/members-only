@@ -1,0 +1,17 @@
+<div class="container py-3 flex-column d-flex align-items-center">
+  <p class="fs-3 text-success"><%= post_index_user_signed %>&nbsp;&nbsp;<%= post_index_user_button %></p>
+  <br/><br/>
+  <% @posts.each do |post| %>
+    <div class="card border my-4" style="width: 50rem;">
+      <div class="card-body flex-column justify-content-center">
+        <h5 class="card-title mt-2 fs-3"><%= post.title %></h5>
+        
+        <p class="fs-5"><%= post_index_author(post) %></p><br/>
+
+        <div class="cont d-flex mb-2">  
+          <%= link_to 'View Post', post, class:"btn btn-success btn-sm" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

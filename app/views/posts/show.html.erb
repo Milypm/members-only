@@ -1,0 +1,13 @@
+<div class="container my-3 flex-column d-flex align-items-center">
+  <div class="card border" style="width: 50rem;">
+    <div class="card-body flex-column justify-content-center">
+      <p class="card-title fs-2"><%= @post.title %></p><br/>
+      <p class="card-text flex-md-fill fs-4"><%= @post.description %></p>
+      <br/>
+      <p class="fs-5"><%= post_show_author %></p><br/>
+      <%= post_show_editbtn %>
+      <%= post_show_delbtn %>
+      <%= link_to 'Back', posts_path, class:"btn btn-secondary btn-sm" %>
+    </div>
+  </div>
+</div>
