@@ -29,8 +29,8 @@ module PostsHelper
   end
 
   def post_show_delbtn
-    link = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' },
-      class: 'btn btn-danger btn-sm'
+    link = link_to 'Delete', @post, method: :delete,
+     data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm'
     link unless @post.user != current_user
   end
 end
