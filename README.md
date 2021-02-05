@@ -23,6 +23,7 @@
 - Ruby (v. 2.6.5)
 - Ruby on Rails (v. 6.1.1)
 - devise gem
+- Bootstrap
 - Rubocop
 - Git
  
@@ -32,13 +33,13 @@
 ## How to run it
 * It's recommended to use Git's latest version.
 * Clone or download the repo from here [members-only](https://github.com/Milypm/members-only.git) on your local system.
---- Click on the "Code" green button and copy HTTPS URL.
---- Go to your local system, on an empty folder, to clone the repo: 'git clone -HTTPS URL-'.
---- Go to the repo folder.
---- Install the dependencies: 'bundle install'.
---- Migrate the database: 'rails db:migrate'.
---- Start the server: 'rails server' or 'rails s'.
---- Copy/open the path given to open the project in the browser: 'http://localhost:3000/'.
+  - Click on the "Code" green button and copy HTTPS URL.
+  - Go to your local system, on an empty folder, to clone the repo: 'git clone -HTTPS URL-'.
+  - Go to the root directory.
+  - Install the dependencies: 'bundle install'.
+  - Migrate the database: 'rails db:migrate'.
+  - Start the server: 'rails server' or 'rails s'.
+  - Copy/open the path given to open the project in the browser: 'http://localhost:3000/'.
  
 ## Author
 **Mily Puente** :woman_technologist:
