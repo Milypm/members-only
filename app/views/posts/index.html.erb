@@ -1,21 +1,13 @@
 <div class="container py-3 flex-column d-flex align-items-center">
-  <% if user_signed_in? %>
-    <p class="fs-3">Hi, <%= current_user.name %>!</p>
-    <%= link_to 'Add New Post', new_post_path(@post), class:"btn btn-outline-success mb-3" %>
-  <% else %>
-    <p class="fs-4">Want to Add a New Post?
-      <%= link_to 'Sign In', new_user_session_path, class:"btn btn-outline-success" %>
-    </p>
-  <% end %>
+  <p class="fs-3 text-success"><%= post_index_user_signed %>&nbsp;&nbsp;<%= post_index_user_button %></p>
   <br/><br/>
   <% @posts.each do |post| %>
     <div class="card border my-4" style="width: 50rem;">
       <div class="card-body flex-column justify-content-center">
-        <h5 class="card-title mt-2 fs-3"><%= post.title %></h5><br/>
+        <h5 class="card-title mt-2 fs-3"><%= post.title %></h5>
         
-        <% if user_signed_in? %>
-          <p class="fs-5">Created by <%= post.user.name %></p><br/>
-        <% end %>
+        <p class="fs-5"><%= post_index_author(post) %></p><br/>
+
         <div class="cont d-flex mb-2">  
           <%= link_to 'View Post', post, class:"btn btn-success btn-sm" %>
         </div>

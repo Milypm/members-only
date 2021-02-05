@@ -1,6 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Building an application using devise
- 
+
+
+![img_1](./app/assets/images/clubrails_1.png)
+![img_2](./app/assets/images/clubrails_2.png)
+![img_3](./app/assets/images/clubrails_3.png)
+![img_4](./app/assets/images/clubrails_4.png)
+![img_5](./app/assets/images/clubrails_5.png)
+![img_6](./app/assets/images/clubrails_6.png)
+
+
 > I created a Ruby on Rails application for a site where users can create accounts and posts.
 
 - Consists of two models: user and post, two controllers: home and posts, two main views: home and posts.
@@ -23,8 +32,13 @@
 ## How to run it
 * It's recommended to use Git's latest version.
 * Clone or download the repo from here [members-only](https://github.com/Milypm/members-only.git) on your local system.
-* Unzip/Open the root folder, on the command line/terminal:
-- Type: rails server / rails s...click the link to open in the browser
+--- Click on the "Code" green button and copy HTTPS URL.
+--- Go to your local system, on an empty folder, to clone the repo: 'git clone -HTTPS URL-'.
+--- Go to the repo folder.
+--- Install the dependencies: 'bundle install'.
+--- Migrate the database: 'rails db:migrate'.
+--- Start the server: 'rails server' or 'rails s'.
+--- Copy/open the path given to open the project in the browser: 'http://localhost:3000/'.
  
 ## Author
 **Mily Puente** :woman_technologist:

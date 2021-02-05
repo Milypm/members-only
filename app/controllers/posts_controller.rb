@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
-  before_action :user_signed_in?, only: %i[new create]
+  before_action :user_signed_in?, only: %i[new create index]
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_post, only: %i[show edit update destroy]
-  # before_action :correct_user, only: %i[edit update destroy]
 
   # GET /posts or /posts.json
   def index
@@ -27,10 +26,8 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,11 +53,6 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  # def correct_user
-  #   redirect_to @post, notice: "Woops! It seems you're not authorized to
-  #   edit this post :(" unless @post.user == current_user
-  # end
 
   private
 

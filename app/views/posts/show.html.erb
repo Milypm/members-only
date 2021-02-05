@@ -4,14 +4,10 @@
       <p class="card-title fs-2"><%= @post.title %></p><br/>
       <p class="card-text flex-md-fill fs-4"><%= @post.description %></p>
       <br/>
-      <% if user_signed_in? %>
-        <p class="card-text flex-md-fill fs-5">Created by <%= @post.user.name %></p><br/>
-        <% if @post.user == current_user %>
-          <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-success btn-sm" %>
-          <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
-        <% end %>
-      <% end %>
-        <%= link_to 'Back', posts_path, class:"btn btn-secondary btn-sm" %>
+      <p class="fs-5"><%= post_show_author %></p><br/>
+      <%= post_show_editbtn %>
+      <%= post_show_delbtn %>
+      <%= link_to 'Back', posts_path, class:"btn btn-secondary btn-sm" %>
     </div>
   </div>
 </div>
